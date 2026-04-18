@@ -450,21 +450,58 @@ h6,
 }
 
 /* =========================================
-   DIGITAL CARD MODAL
+   DIGITAL CARD MODAL (IMAGE VERSION)
 ========================================= */
-.card-digital {
+.tarjeta-wrapper {
+    overflow: hidden;
     border-radius: 1rem;
+    cursor: pointer;
+    background: #f0f0f0;
 }
 
-.card-action-btn {
+.tarjeta-img {
+    transition: transform 0.5s ease;
+    width: 100%;
+    display: block;
+}
+
+.tarjeta-wrapper:hover .tarjeta-img {
+    transform: scale(1.05);
+}
+
+.tarjeta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 61, 165, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.tarjeta-wrapper:hover .tarjeta-overlay {
+    opacity: 1;
+}
+
+#digitalCardModal .modal-content {
+    border: none;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+#digitalCardModal .btn {
+    font-weight: 600;
+    letter-spacing: 0.5px;
     transition: all 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.05);
 }
 
-.card-action-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateX(5px);
-    color: #fff;
+#digitalCardModal .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* =========================================
