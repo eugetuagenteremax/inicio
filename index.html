@@ -219,10 +219,11 @@
                             class="btn btn-outline-secondary btn-lg px-4 rounded-pill shadow-sm">
                             <i class="far fa-file-pdf me-2"></i> Descargar Guía
                         </a>
-						   <a href="https://wa.me/message/65SKD55JMWUWD1?text=Hola%20Eugenia,%20quisiera%20vender%20una%20propiedad."
-                            target="_blank" class="btn btn-remax-blue btn-lg px-4 rounded-pill shadow-sm">
-                            <i class="fab fa-whatsapp me-2"></i> ¿Qué es un ACM?
-                        </a>
+						   <button type="button"
+                            class="btn btn-remax-blue btn-lg px-4 rounded-pill shadow-sm"
+                            data-bs-toggle="modal" data-bs-target="#videoModal">
+                            <i class="fas fa-play me-2"></i> ¿Qué es un ACM?
+                        </button>
 						
 						
 						
@@ -432,6 +433,24 @@
         aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 overflow-hidden shadow-lg">
+                <div class="modal-header border-0 pb-0 bg-dark">
+                    <h5 class="modal-title font-outfit fw-bold text-white" id="videoModalLabel">¿Qué es un ACM?</h5>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 bg-dark">
+                    <video width="100%" height="auto" controls class="w-100">
+                        <source src="video.mp4" type="video/mp4">
+                        Tu navegador no soporta el tag de video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Digital Card Modal -->
     <div class="modal fade digital-card-modal" id="digitalCardModal" tabindex="-1"
